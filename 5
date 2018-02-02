@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _05.Невалидно_Число
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double n = double.Parse(Console.ReadLine());
+            if (n > 99 && n < 201 || n == 0)
+                Console.WriteLine();
+            else
+                Console.WriteLine("invalid");
+        }
+    }
+}
