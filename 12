@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _12.Волейбол
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string TypeOfYear = Console.ReadLine();
+            double p = double.Parse(Console.ReadLine());
+            double h = double.Parse(Console.ReadLine());
+            double games = (48 - h) * 0.75 + h + p * 2 / 3;
+            if (TypeOfYear == "leap")
+                games *= 1.15;
+            Console.WriteLine((int)games);
+
+
+        }
+    }
+}
