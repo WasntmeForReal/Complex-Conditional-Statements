@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _08.Търговски_комисионни
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string town = Console.ReadLine().ToLower();
+            double sales = double.Parse(Console.ReadLine());
+            double commision = -1;
+            if (town == "sofia")
+            {
+                if (0 <= sales && sales <= 500) commision = 0.05*sales;
+                else if (500 < sales && sales <= 1000) commision = 0.07 * sales;
+                else if (1000 < sales && sales <= 10000) commision = 0.08 * sales;
+                if (10000 < sales) commision = 0.12 * sales;
+            }
+
+            if (town == "varna")
+            {
+                if (0 <= sales && sales <= 500) commision = 0.045 * sales;
+                else if (500 < sales && sales <= 1000) commision = 0.075 * sales;
+                else if (1000 < sales && sales <= 10000) commision = 0.10 * sales;
+                if (10000 < sales) commision = 0.13 * sales;
+            }
+            
+            if (town == "plovdiv")
+            {
+                if (0 <= sales && sales <= 500) commision = 0.055 * sales;
+                else if (500 < sales && sales <= 1000) commision = 0.08 * sales;
+                else if (1000 < sales && sales <= 10000) commision = 0.12 * sales;
+                if (10000 < sales) commision = 0.145 * sales;
+            }
+            if (commision>0)
+                Console.WriteLine($"{commision:f2}");
+            else
+                Console.WriteLine("error");
+
+        }
+    }
+}
