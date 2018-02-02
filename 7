@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _07.Магазин_за_плодове
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string fruit = Console.ReadLine();
+            string day = Console.ReadLine();
+            double n = double.Parse(Console.ReadLine());
+            bool workday = false;
+            bool nonWorkday = false;
+
+            switch (day)
+            {
+                case "Monday": workday = true; break;
+                case "Tuesday": workday = true; break;
+                case "Wednesday": workday = true; break;
+                case "Thursday": workday = true; break;
+                case "Friday": workday = true; break;
+
+                case "Saturday": nonWorkday = true; break;
+                case "Sunday": nonWorkday = true; break;
+                default: Console.WriteLine("error"); break;
+            }
+
+
+            double price = 0;
+            if (workday)
+                switch (fruit)
+                {
+                    case "banana": price = 2.50 * n; break;
+                    case "apple": price = 1.20 * n; break;
+                    case "orange": price = 0.85 * n; break;
+                    case "grapefruit": price = 1.45 * n; break;
+                    case "kiwi": price = 2.70 * n; break;
+                    case "pineapple": price = 5.50 * n; break;
+                    case "grapes": price = 3.85 * n; break;
+
+                    default: Console.WriteLine("error"); break;
+                }
+
+
+
+
+            else if (nonWorkday)
+                switch (fruit)
+                {
+                    case "banana": price = 2.70 * n; break;
+                    case "apple": price = 1.25 * n; break;
+                    case "orange": price = 0.90 * n; break;
+                    case "grapefruit": price = 1.60 * n; break;
+                    case "kiwi": price = 3.00 * n; break;
+                    case "pineapple": price = 5.60 * n; break;
+                    case "grapes": price = 4.20 * n; break;
+
+                    default: Console.WriteLine("error"); break;
+                }
+
+
+            Console.WriteLine($"{price:F2}");
+
+
+
+
+
+
+        }
+    }
+}
