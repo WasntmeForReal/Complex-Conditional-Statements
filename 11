@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _11.Кино
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string ProjectionType = Console.ReadLine();
+
+            double c = double.Parse(Console.ReadLine());
+            double r = double.Parse(Console.ReadLine());
+            double price = 0;
+            if (ProjectionType == "Premiere")
+            {
+                price = c * r * 12;
+                Console.WriteLine($"{price:f2}");
+            }
+
+            if (ProjectionType == "Normal")
+            {
+                price = c * r * 7.5;
+                Console.WriteLine($"{price:f2}");
+            }
+
+            if (ProjectionType == "Discount")
+            {
+                price = c * r * 5;
+                Console.WriteLine($"{price:f2}");
+            }
+
+
+
+
+        }
+    }
+}
